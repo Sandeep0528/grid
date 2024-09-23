@@ -1,0 +1,98 @@
+body {
+    background-color: lightblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.food-item {
+    background-color: lightgray;
+    width: 280px;
+    height: 250px;
+    border: 2px solid black;
+}
+
+img {
+    width: 100%;
+    height: 80%;
+}
+
+.food-item-part-2 {
+    height: 20%;
+}
+
+.food-item-part-2_1,
+.food-item-part-2_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width:424px) {
+    .food-items {
+        display: grid;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width:425px) and (max-width:768px) {
+    .food-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: lightcoral;
+    }
+
+    .food-item-part-2 span {
+        font-size: 1rem;
+    }
+
+    .food-item-part-2_1>h3 {
+        font-size: 1.7rem;
+    }
+
+    .food-item-part-2_2>p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .food-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background-color: lightcyan;
+    }
+}
+
+@media (min-width:1025px) and (max-width:1440px) {
+    .food-items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100vh;
+        background-color: lightgray;
+    }
+}
+
+
+@media (min-width:1441px) {
+    .food-items {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+        background-color: lightsalmon;
+
+    }
+}
